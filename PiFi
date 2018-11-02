@@ -1,0 +1,74 @@
+pi@raspberrypi:~ $ sudo su
+root@raspberrypi:/home/pi# cd PiFi
+root@raspberrypi:/home/pi/PiFi# ls
+LICENSE  logo.png  README.md  src  test
+root@raspberrypi:/home/pi/PiFi# cd src
+root@raspberrypi:/home/pi/PiFi/src# ls
+setup.sh
+root@raspberrypi:/home/pi/PiFi/src# ./setup.sh 
+     
+       /         '. \ ' ' / .'         \
+      |   /       .~ .~~~..~.       \   |
+     |   |   /   : .~.'~'.~. :   \   |   |
+    |   |   |   ~ (   ) (   ) ~   |   |   |
+    |   |  |   ( : '~'.~.'~' : )   |  |   |
+    |   |   |   ~ .~ (   ) ~. ~   |   |   |
+     |   |   \   (  : '~' :  )   /   |   |
+      |   \       '~ .~~~. ~'       /   |
+       \              '~'              /
+             Raspberry PiFi
+                   by 4d4m0u
+    
+This script will configure your Raspberry Pi as a wireless access point and to connect to any OPEN WiFi access point.
+Press [Enter] to begin, [Ctrl-C] to abort...
+./setup.sh: line 120: update: command not found
+./setup.sh: line 121: upgrade: command not found
+   [✔] (hostapd) is already installed.
+   [✔] (isc-dhcp-server) is already installed.
+   [✔] (iptables-persistent) is already installed.
+ifdown: unknown interface wlan0
+   [?] Enter an SSID for the HostAPD Hotspot: PI
+   [?] Type a password to access your , then press [ENTER]:    [?] Verify password to access your , then press [ENTER]:    [✔] Password set. Edit /etc/hostapd/hostapd.conf to change.
+Synchronizing state of netfilter-persistent.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable netfilter-persistent
+--2018-11-02 01:35:36--  http://www.adafruit.com/downloads/adafruit_hostapd.zip
+Resolving www.adafruit.com (www.adafruit.com)... 2606:4700:10::6814:26f0, 2606:4700:10::6814:27f0, 104.20.38.240, ...
+Connecting to www.adafruit.com (www.adafruit.com)|2606:4700:10::6814:26f0|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.adafruit.com/downloads/adafruit_hostapd.zip [following]
+--2018-11-02 01:35:36--  https://www.adafruit.com/downloads/adafruit_hostapd.zip
+Connecting to www.adafruit.com (www.adafruit.com)|2606:4700:10::6814:26f0|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://cdn-shop.adafruit.com/adafruit-download/adafruit_hostapd.zip [following]
+--2018-11-02 01:35:36--  https://cdn-shop.adafruit.com/adafruit-download/adafruit_hostapd.zip
+Resolving cdn-shop.adafruit.com (cdn-shop.adafruit.com)... 2606:4700:10::6814:26f0, 2606:4700:10::6814:27f0, 104.20.39.240, ...
+Connecting to cdn-shop.adafruit.com (cdn-shop.adafruit.com)|2606:4700:10::6814:26f0|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 709582 (693K) [application/zip]
+Saving to: ‘adafruit_hostapd.zip’
+
+adafruit_hostapd.zi 100%[===================>] 692.95K  --.-KB/s    in 0.1s    
+
+2018-11-02 01:35:36 (6.69 MB/s) - ‘adafruit_hostapd.zip’ saved [709582/709582]
+
+Archive:  adafruit_hostapd.zip
+  inflating: hostapd                 
+Job for isc-dhcp-server.service failed because the control process exited with error code.
+See "systemctl status isc-dhcp-server.service" and "journalctl -xe" for details.
+Specify "SSID": Mirror
+Specify "WPA Passphrase": choochoo
+
+--------------------------------------------------
+
+You've specified following values:
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+WiFi SSID: Mirror
+WPA Passphrase: choochoo
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Are these settings correct for Mirror [Y/n] [Default=Y] [Quit=Q/q]? Y
+./setup.sh: line 260: configure_wifi: command not found
+   [?] Do you want to restart? (y/n) 
